@@ -1,2 +1,3 @@
 # unions
-Explore unions in C++
+
+Explore unions in C++.
