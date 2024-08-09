@@ -109,16 +109,14 @@ inline double benchmark_dod(std::size_t size,
         c = new_color;
     }
 
-    for (auto &r : shapes.radii)
+    for (const auto &r : shapes.circles)
     {
         total_area += 3.1415926535f * r * r;
     }
 
-    std::size_t ind{0};
-    for (std::size_t k = 0; k < shapes.sides.size() / 2; k++)
+    for (const auto &s : shapes.rectangles)
     {
-        total_area += shapes.sides[ind] * shapes.sides[ind + 1];
-        ind += 2;
+        total_area += s.width * s.height;
     }
     const auto dt = std::chrono::high_resolution_clock::now() - t0;
     return std::chrono::duration_cast<std::chrono::microseconds>(dt).count();

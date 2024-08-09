@@ -10,3 +10,11 @@ struct point
     float x{0};
     float y{0};
 };
+
+struct shape_size
+{
+    float width{0};
+    float height{0};
+};
+
+typedef float radius;

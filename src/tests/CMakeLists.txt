@@ -17,6 +17,7 @@ set(UNIONS_TEST_HEADERS
 
 set(UNIONS_TEST_SOURCES
 	test_main.cpp
+  test_visitor.cpp
 )
 
 add_executable(${UNIONS_TEST_NAME}

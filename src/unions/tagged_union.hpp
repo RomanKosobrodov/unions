@@ -32,13 +32,13 @@ namespace tu
             rectangle_shape rectangle;
         };
 
-        shape(const point &xy, const shape_color &c, float radius)
-            : origin{xy.x, xy.y}, color{c}, circle{radius}, tag{shape_tag::circle}
+        shape(const point &xy, const shape_color &c, float r)
+            : origin{xy.x, xy.y}, color{c}, tag{shape_tag::circle}, circle{r}
         {
         }
 
         shape(const point &xy, const shape_color &c, float a, float b)
-            : origin{xy.x, xy.y}, color{c}, rectangle{a, b}, tag(shape_tag::rectangle)
+            : origin{xy.x, xy.y}, color{c}, tag{shape_tag::rectangle}, rectangle{a, b}
         {
         }
     };

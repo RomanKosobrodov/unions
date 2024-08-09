@@ -119,14 +119,13 @@ inline void initialise(std::size_t size,
 
         if (std::rand() < RAND_MAX / 2)
         {
-            shapes.radii.push_back(std::rand() / scale);
+            shapes.circles.push_back(std::rand() / scale);
         }
         else
         {
             const float a{std::rand() / scale};
             const float b{std::rand() / scale};
-            shapes.sides.push_back(a);
-            shapes.sides.push_back(b);
+            shapes.rectangles.push_back({a, b});
         }
     }
 }
