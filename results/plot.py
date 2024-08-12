@@ -13,6 +13,10 @@ if __name__ == "__main__":
     data = np.genfromtxt(args.filename, delimiter=",", skip_header=1)
     data = data / 1000
 
+    for k in range(1, data.shape[1]):
+        ratio = np.mean(data[:, 0]) / np.mean(data[:, k])
+        print(f"{labels[k]}/{labels[0]}\t {ratio:.1f}")
+
     labels = [x.replace("\"", "") for x in labels]
     colors = ["#3A6D80", "#F3CD53", "#D56729", "#9D402D"]
 

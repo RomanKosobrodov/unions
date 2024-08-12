@@ -94,13 +94,13 @@ inline void initialise(std::size_t size,
         if (std::rand() < RAND_MAX / 2)
         {
             const float radius{std::rand() / scale};
-            shapes.emplace_back(new oop::circle(p, c, radius));
+            shapes.emplace_back(std::make_unique<oop::circle>(p, c, radius));
         }
         else
         {
             const float a{std::rand() / scale};
             const float b{std::rand() / scale};
-            shapes.emplace_back(new oop::rectangle(p, c, a, b));
+            shapes.emplace_back(std::make_unique<oop::rectangle>(p, c, a, b));
         }
     }
 }
